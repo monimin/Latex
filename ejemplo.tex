@@ -1,0 +1,33 @@
+\documentclass[letterpaper,12pt]{article}
+
+\usepackage[utf8]{inputenc} % Soporte para acentos
+\usepackage[T1]{fontenc}    
+\usepackage[spanish]{babel} % Español
+\usepackage{amsmath}	% Soporte de símbolos adicionales (matemáticas)
+\usepackage{amssymb}		
+\usepackage{amsfonts}
+\usepackage{latexsym}
+
+% Información para el título
+\title{Documento modular}
+\author{Miguel Piña}
+
+% Indicamos una separación entre los párrafos
+\parskip=3mm
+
+% Eliminamos la sangría de los párrafos
+\parindent=0mm
+
+\pagestyle{myheadings}
+%\markright{\LaTeX \hfill Fórmulas matemáticas \;\;}
+
+\begin{document}
+
+\maketitle
+% con \input mandamos llamar docuemntos en insertarlos y se insertan en el orden en el que los coloquemos si escribimos \include nos da un salto de línea
+\include{miprimeraseccion/etimologia}	% Llama al documetno etimologia y lo inserta
+\include{section}		% Llama al documento section y lo inserta
+\include{credito}		% Llama al documento llamado credito y lo inserta
+\bibliographystyle{plain}
+\bibliography{biblio}
+\end{document}
